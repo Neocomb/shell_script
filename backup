@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -f "$1" ];then
+	name=$1$(date +%Y%m%d)
+	echo "backup file to" $name
+	cp $1 $name
+fi
+

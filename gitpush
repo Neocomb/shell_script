@@ -1,0 +1,20 @@
+#!/bin/bash
+
+read -p "please input your comment to commit:" comment
+
+while( [ -z $repos ] )
+do
+read -p "please input your online repository:" repos
+done
+
+read -p "please input branch which you want to commit:" branch
+
+if [ ! -e .git ];then
+    echo -e "start init git\n"  
+    git init
+    git add .
+fi
+
+git commit -m ${comment:-"edit by neo `date +%x-%H:%M`"}
+git remote add origin git@github.com:Neocomb/$repos.git 
+git push -u origin ${branch:-"master"}

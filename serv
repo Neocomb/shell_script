@@ -1,0 +1,9 @@
+#########################################################################
+# File Name: service.sh
+# Author: xiegd
+# mail: xiegd@ipanel.com
+# Created Time: Thu 29 Jan 2015 01:17:18 PM PST
+#########################################################################
+#!/bin/bash
+echo $1 $2
+sudo /etc/init.d/$1 $2

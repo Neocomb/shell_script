@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ -e "~/trash" ];then
+	mkdir ~/trash
+fi
+
+mv -f $1 ~/trash
+echo "you can find $1 in ~/trash\n"
+	
+
